@@ -58,11 +58,17 @@ class LazyBST{
         void recPrint(TreeNode<T> *node);
     private:
         TreeNode<T> *root;
+        int total;
+        int leftSubTreeDepth;
+        int rightSubTreeDepth;
 };
 
 template <class T>
 LazyBST<T> :: LazyBST() {
     root = NULL;
+    total = 0;
+    leftSubTreeDepth = 0;
+    rightSubTreeDepth = 0;
 }
 
 template <class T>
@@ -121,6 +127,7 @@ T* LazyBST<T> :: getMax() {
 template <class T>
 void LazyBST<T> :: insert(T value) {
     TreeNode<T> *node = new TreeNode<T>(value);
+    total += 1;
 
     if(isEmpty()) {
         root = node;
