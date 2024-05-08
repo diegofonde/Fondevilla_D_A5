@@ -34,6 +34,6 @@ bool Records::isLesser(Records *r) {
     return(id < r->getId());
 }
 
-id Records::getId() {
+int Records::getId() {
     return id;
 }

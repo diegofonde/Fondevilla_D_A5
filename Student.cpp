@@ -6,9 +6,9 @@ Student :: Student() : Records() {
     advisor = 0;
 }
 
-Student :: Student(int i, string s, string s2, string s3, double g, int a) : Records(int i, string s, string s2) {
+Student :: Student(int i, string s, string s2, string s3, double g, int a) : Records(i, s, s2) {
     major = s3;
-    GPA = double;
+    GPA = g;
     advisor = a;
 }
 
