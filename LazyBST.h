@@ -10,14 +10,14 @@ class LazyBST{
         LazyBST();
         virtual ~LazyBST();
 
-        void insert(T value);
-        bool contains(T value); //search method
-        bool deleteNode(T k);
-        TreeNode<T> *getSuccessor(TreeNode<T> *d);
+        void insert(Records *r);
+        void search(int id); //search method
+        // bool deleteNode(T k);
+        // TreeNode<T> *getSuccessor(TreeNode<T> *d);
         
         bool isEmpty();
-        T* getMin();
-        T* getMax();
+        Records* getMin();
+        Records* getMax();
 
         void printTree();
         void recPrint(LazyNode *node);

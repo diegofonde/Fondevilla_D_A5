@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "Records.h"
+#include "Student.h"
+#include "Faculty.h"
 using namespace std;
 
 class LazyNode {
@@ -12,7 +14,7 @@ class LazyNode {
         virtual ~LazyNode();
 
         int id;
-        Records key;
+        Records *key;
         LazyNode *left;
         LazyNode *right;
 };

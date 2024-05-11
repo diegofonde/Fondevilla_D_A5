@@ -25,7 +25,7 @@ bool LazyBST :: isEmpty() {
     return (root == NULL);
 }
 
-LazyNode* LazyBST :: getMin() {
+Records* LazyBST :: getMin() {
 
     if(isEmpty()) {
         return NULL;
@@ -37,7 +37,7 @@ LazyNode* LazyBST :: getMin() {
     return &(current->key);
 }
 
-LazyNode* LazyBST :: getMax() {
+Records* LazyBST :: getMax() {
     if(isEmpty())
         return NULL;
 
@@ -46,4 +46,60 @@ LazyNode* LazyBST :: getMax() {
         current = current->right;
     }
     return &(current->key);
+}
+
+void LazyBST :: insert(Records *r) {
+    LazyNode *node = new LazyNode(r);
+    
+
+    if(isEmpty()) {
+        root = node;
+    }
+    else {
+        LazyNode *current = root;
+        LazyNode *parent = NULL;
+
+        while(true) {
+            parent = current;
+
+            if(r->getId() < current->id) {
+                current = current->left;
+
+                if(current == NULL) {
+                    parent->left = node;
+                    break;
+                }
+            }
+            else {
+                current = current->right;
+                if(current == NULL) {
+
+                    parent->right = node;
+                    break;
+                }
+            }
+        }
+    }
+}
+
+Records* LazyBST :: search(int id) {
+    if(isEmpty()) {
+        return NULL;
+    }
+
+    LazyNode *current = root;
+    while(current->id != id) {
+        if(id < current->id) {
+            current = current->left;
+        }
+        else {
+            current = current->right;
+        }
+
+        if(current == NULL) {
+            return NULL;
+        }
+    }
+
+    return current->key;
 }
