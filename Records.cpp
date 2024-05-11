@@ -37,3 +37,9 @@ bool Records::isLesser(Records *r) {
 int Records::getId() {
     return id;
 }
+
+void Records :: printInfo() {
+    cout << "ID: " << id << endl;
+    cout << "Name: " << name << endl;
+    cout << "Level: " << level << endl; 
+}

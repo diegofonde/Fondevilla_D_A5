@@ -11,3 +11,8 @@ Faculty :: Faculty(int i, string s, string s2, string s3) : Records(i, s, s2) {
 Faculty :: ~Faculty() {
     //to do
 }
+
+void Faculty :: printInfo() {
+    Records :: printInfo();
+    cout << "Department: " << department << endl;
+}

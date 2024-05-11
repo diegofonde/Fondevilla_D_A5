@@ -15,3 +15,10 @@ Student :: Student(int i, string s, string s2, string s3, double g, int a) : Rec
 Student :: ~Student() {
     //to do
 }
+
+void Student :: printInfo() {
+    Records :: printInfo();
+    cout << "Major: " << major << endl;
+    cout << "GPA: " << GPA << endl;
+    cout << "Advisor: " << advisor << endl;
+}

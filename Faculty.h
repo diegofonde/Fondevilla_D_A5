@@ -8,6 +8,7 @@ class Faculty: public Records {
         Faculty();
         Faculty(int i, string s, string s2, string s3);
         ~Faculty();
+        void printInfo() override;
     private:
         string department;
 

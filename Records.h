@@ -14,6 +14,7 @@ class Records{
         bool isGreater(Records *r);
         bool isLesser(Records *r);
         int getId();
+        virtual void printInfo();
     protected:
         int id; //int variable for id
         string name; //string variable for name
