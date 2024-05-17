@@ -1,17 +1,19 @@
 #include "LazyNode.h"
 
 LazyNode :: LazyNode() {
-    id = 0;
-    key = NULL;
+    key = Records();
     left = NULL;
     right = NULL;
+    leftDepth = 0;
+    rightDepth = 0;
 }
 
-LazyNode :: LazyNode(Records *r) {
-    id = r->getId();
+LazyNode :: LazyNode(Records r) {
     key = r;
     left = NULL;
     right = NULL;
+    leftDepth = 0;
+    rightDepth = 0;
 }
 
 LazyNode :: ~LazyNode() {
