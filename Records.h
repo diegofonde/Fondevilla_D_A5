@@ -9,12 +9,12 @@ class Records{
         Records(); //default constructor
         Records(int i); //overloaded constrcutor for only id
         Records(int i, string s, string s2); //overloaded constructor for every variable
-        ~Records(); //default constructor
-        bool isEquals(Records *r);
-        bool isGreater(Records *r);
-        bool isLesser(Records *r);
-        int getId();
-        virtual void printInfo();
+        virtual ~Records(); //default constructor
+        bool isEquals(Records r); //is equals method
+        bool isGreater(Records r); //is greater method
+        bool isLesser(Records r); //is lesser method
+        int getId(); //get id method
+        virtual void printInfo() const; //print method for records class
     protected:
         int id; //int variable for id
         string name; //string variable for name
